@@ -13,7 +13,6 @@ tags: [tools]
 ## 1、安装sublime text 3
 
 由于要在多台电脑上使用，所以下载portable版本，通过坚果云同步配置。
-
 [下载sublime text 3](http://www.sublimetext.com/3)，解压到自己想放软件的地方，同步到坚果云。
 
 ## 2、基本设置
@@ -71,7 +70,7 @@ sublime key settings设置光标跳出括号Preferences-Key Bindings，在右侧
 
 ### 3.1 安装package control
 
-参考[Package Control](https://packagecontrol.io/installation)官网页面进行安装，在线方法为：打开sublime，`Ctrl+/``调出控制台，复制下列代码，Enter：
+参考[Package Control](https://packagecontrol.io/installation)官网页面进行安装，在线方法为：打开sublime，`Ctrl+``调出控制台，复制下列代码，Enter：
 
 ```
 import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe013ee18cced0ef93d5f746d80ef60'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)
@@ -80,7 +79,7 @@ import urllib.request,os,hashlib; h = '6f4c264a24d933ce70df5dedcf1dcaee' + 'ebe0
 我没有装成功，采用官网右侧Manual提示的方法：
 
 - 在官网下载[Package Control.sublime-package](https://packagecontrol.io/Package%20Control.sublime-package)
-- 点击sublime菜单栏：`Preferences *>* Browse Packages`，回到文件夹的上一级菜单，打开`Installed Packages`文件夹
+- 点击sublime菜单栏：`Preferences - Browse Packages`，回到文件夹的上一级菜单，打开`Installed Packages`文件夹
 - 把下载的Package Control.sublime-package放进Installed Packages文件夹
 - 重启sublime
 
@@ -132,14 +131,9 @@ Markdown Editing + MarkdownLivePreview：安装这两款插件后，重启sublim
 ## 参考资料：
 
 [Sublime Text 全程指南](http://zh.lucida.me/blog/sublime-text-complete-guide/)
-
 [如何优雅地使用Sublime Text3](https://jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/#)
-
 [Sublime Text 3前端开发常用优秀插件介绍](http://www.cnblogs.com/hykun/p/sublimeText3.html)
-
 [Sublime Text的心得经验](https://github.com/jikeytang/sublime-text)
-
 [Sublime Text3 + Markdown + 实时预览](http://www.cnblogs.com/james-lee/p/6847906.html)
-
 [Sublime Text 3 MarkdownEditing布局设置](http://blog.csdn.net/hfut_jf/article/details/52853868)
 
