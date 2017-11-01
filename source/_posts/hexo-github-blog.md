@@ -141,7 +141,7 @@ git push origin hexo -f //将本地仓库的源文件分支hexo强制推送到�
 
 此时刷新GitHub博客项目就可以看到推送的hexo文件。
 
-## 4、其他终端配置
+## 5、其他终端配置
 
 此时在另一终端更新博客，只需要将Github的hexo分支clone下来，进行初次的相关配置：
 
@@ -153,7 +153,7 @@ npm install    //注意，这里一定要切换到刚刚clone的文件夹内执�
 
 如果是全新电脑，需要操作“1、基础环境配置”中的步骤，再进行上述命令操作。
 
-## 5、不同终端博客更新
+## 6、不同终端博客更新
 
 在不同的终端已经做完配置，就可以愉快的分享自己更新的博客，进入自己相应的文件夹：
 
@@ -168,9 +168,9 @@ hexo g -d  //push更新完分支之后将自己写的博客对接到自己搭的
 
 ***
 
-## 6、其他设置
+## 7、其他设置
 
-### 6.1 hexo文件修改
+### 7.1 hexo配置修改
 
 打开_config.yml设置网站名称、描述、语言等：
 
@@ -183,7 +183,7 @@ language: zh-Hans
 timezone: Asia/Shanghai
 ```
 
-### 6.2 主题修改
+### 7.2 主题修改
 
 - 示例：下载next主题
 
@@ -199,23 +199,19 @@ timezone: Asia/Shanghai
 
 - 修改主题配置文件，位置`themes/next/_config.yml`，具体可参考[next主题配置](http://theme-next.iissnan.com/theme-settings.html)
 
-## 7、参考资料
+- PS. 第三方主题要把主题文件夹下面把.git文件夹删除掉，再推送
+
+## 8、参考资料
 
 - [使用Hexo & Github,搭建属于自己的博客](http://www.cnblogs.com/ld1024/p/5913169.html)
 - [hexo你的博客](http://ibruce.info/2013/11/22/hexo-your-blog/)
 - [Jekyll迁移到Hexo搭建个人博客](https://www.ezlippi.com/blog/2016/02/jekyll-to-hexo.html)
-
 - [记录第一次搭建hexo](http://www.jianshu.com/p/017e01718d41)
-
 - [手把手教你用Hexo+Github 搭建属于自己的博客](http://blog.csdn.net/gdutxiaoxu/article/details/53576018)
-
 - [Hexo搭建Github-Pages博客填坑教程](http://www.jianshu.com/p/35e197cb1273)
-
 - [搭建hexo博客并简单的实现多终端同步](https://righere.github.io/2016/10/10/install-hexo/)
 - [如何解决github+Hexo的博客多终端同步问题](http://blog.csdn.net/Monkey_LZL/article/details/60870891)
-
 - [多机更新 Hexo 博客](http://lowrank.science/Hexo-Migration/)
-
 - [Hexo的版本控制与持续集成](https://formulahendry.github.io/2016/12/04/hexo-ci/) `待实践`
 
 
