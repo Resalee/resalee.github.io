@@ -4,8 +4,6 @@ date: 2017-11-01 11:33:18
 tags: [hexo, Github]
 ---
 
-# Hexo+GitHub博客搭建，多终端同步方案
-
 之前搭建过一次，但是没有备份hexo设置，小白看了一圈，还是要重来，首要问题就是解决hexo文件同步，通过GitHub仓库建立两个分支，master是发布的博客文件，hexo分支放hexo文件。记录一下过程，所用系统都是windows的。
 
 ## 1、基础环境配置
@@ -165,7 +163,7 @@ hexo new post "new blog name"   //新建一个.md文件，并编辑完成自己�
 git add source  //经测试每次只要更新sorcerer中的文件到Github中即可，因为只是新建了一篇新博客
 git commit -m "XX"
 git push origin hexo  //更新分支
-hexo d -g   //push更新完分支之后将自己写的博客对接到自己搭的博客网站上，同时同步了Github中的master
+hexo g -d  //push更新完分支之后将自己写的博客对接到自己搭的博客网站上，同时同步了Github中的master
 ```
 
 ***
