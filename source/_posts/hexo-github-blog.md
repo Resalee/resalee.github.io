@@ -170,9 +170,22 @@ hexo g -d  //push更新完分支之后将自己写的博客对接到自己搭的
 
 ## 6、其他设置
 
-### 6.1 主题修改
+### 6.1 hexo文件修改
 
-- 示例：下载next主题，cd到hexo文件夹
+打开_config.yml设置网站名称、描述、语言等：
+
+```
+title: yourname的博客
+subtitle:
+description: 网站描述
+author: 作者名
+language: zh-Hans
+timezone: Asia/Shanghai
+```
+
+### 6.2 主题修改
+
+- 示例：下载next主题
 
   ```
   git clone https://github.com/iissnan/hexo-theme-next themes/next
@@ -184,8 +197,7 @@ hexo g -d  //push更新完分支之后将自己写的博客对接到自己搭的
   theme: next
   ```
 
-
-
+- 修改主题配置文件，位置`themes/next/_config.yml`，具体可参考[next主题配置](http://theme-next.iissnan.com/theme-settings.html)
 
 ## 7、参考资料
 
