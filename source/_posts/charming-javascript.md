@@ -345,7 +345,7 @@ for (var i=0; i<5; i++){  //1.初始化，条件，自增
 }
 ```
 
-##### 选项卡
+##### 选项卡(this, index)
 ```html
 <head>
     <meta charset="UTF-8">
@@ -440,7 +440,8 @@ for (var i=0; i<5; i++){  //1.初始化，条件，自增
                     aBtn[i].className = '';
                 }
                 this.className = 'active';
-                text.innerHTML = '<h2>' + (this.index + 1) + '月活动</h2><p>' + arr[this.index] + '</p>';
+                text.innerHTML = '<h2>' + (this.index + 1) + '月活动</h2><p>' + 
+                arr[this.index] + '</p>';
             }
         }
     }
