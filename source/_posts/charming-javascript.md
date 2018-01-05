@@ -22,7 +22,9 @@ JavaScript是修改样式的编程语言。
 - 事件：onmouseover，onmouseout，鼠标的进入和移出
 
 ```html
-<input type="checkbox" onmouseover="document.getElementById('hint').style.display='block';" onmouseout="document.getElementById('hint').style.display='none';"> 
+<input type="checkbox" 
+onmouseover="document.getElementById('hint').style.display='block';" 
+onmouseout="document.getElementById('hint').style.display='none';"> 
 <div id="hint">我写我写写写。。。</div>
 ```
 
@@ -48,14 +50,15 @@ function toHide() {
 }
 ```
 ```html
-<input type="checkbox" onmouseover="toShow()" onmouseout="toHide()"> <!-- 添加鼠标事件，调用函数 -->
+<!-- 添加鼠标事件，调用函数 -->
+<input type="checkbox" onmouseover="toShow()" onmouseout="toHide()"> 
 <div id="hint">我写我写写写。。。</div>
 ```
 
 **知识点**：
 1、变量：给XX取一个别名。(var=variable，“变量”的英文)
 eg.
-```
+```js
 //见到oDiv就等于见到了document.getElementById('hint')
 var oDiv = document.getElementById('hint');  
 //见到尚方宝剑就等于见到了皇上
@@ -63,14 +66,14 @@ var 尚方宝剑 = 皇上;
 ```
 2、函数：
 格式：
-```
+```js
 function 函数名() {
     代码
 }
 函数名()
 ```
 eg.
-```JavaScript
+```js
 function show() //定义，只是告诉系统有这个函数，不会实际执行
 {
     alert('abcd');
@@ -152,7 +155,7 @@ oDiv.className='box';
 **知识点**：
 1、if函数，判断条件是否成立，成立时执行语句1，否则执行语句2。
 格式：
-```
+```js
 if (条件) {
     语句1
 }
@@ -161,7 +164,7 @@ else {
 }
 ```
 eg.
-```
+```js
 if (预报有雨) {
     带伞
 }
@@ -304,11 +307,11 @@ oCh.onclick=function () {
         oDiv[i].style.background='green';
       }
     }
-  </script>
-  <div></div>
-  <div></div>
-  <div></div>
-  <div></div>
+</script>
+<div></div>
+<div></div>
+<div></div>
+<div></div>
 ```
 
 **知识点**：
@@ -329,16 +332,16 @@ if (条件) {
 ```
 再看while函数，条件成立时，执行多次：
 ```js
-var i=0;                     //1.初始化
+var i=0;          //1.初始化
 while (i<5) {          //2.条件
-    alert(i);             //3.语句，条件成立时，一直执行
-    i++;                        //4.自增，这里也可以表示为i=i+1，执行完一次，i的值就加1
+    alert(i);          //3.语句，条件成立时，一直执行
+    i++;          //4.自增，这里也可以表示为i=i+1，执行完一次，i的值就加1
 }
 ```
 再看for函数，作用与while一样，条件成立时，执行多次，但格式更简单：
 ```js
 for (var i=0; i<5; i++){  //1.初始化，条件，自增
-    alert(i);                           //2.语句
+    alert(i);  //2.语句
 }
 ```
 
@@ -408,10 +411,22 @@ for (var i=0; i<5; i++){  //1.初始化，条件，自增
 但是可以通过js来设置这个自定义属性，并且可以通过循环设置实现。
 
 ##### JS简易日历（innerHTML）
-```html
+```
  <script>
     window.onload = function() {
-        var arr = ['1月去干啥', '2月去春游', '3月去爬山', '4月去野炊', '5月去大明湖', '6月去哈尔滨', '7月去昆明大理', '8月家里蹲', '9月开学啦', '10月好好学习天天向上', '11月加油考试', '12月写总结，哈哈哈'] //我的坑：没加单引号
+        var arr = [
+        '1月去干啥',
+        '2月去春游',
+        '3月去爬山',
+        '4月去野炊',
+        '5月去大明湖',
+        '6月去哈尔滨',
+        '7月去昆明大理',
+        '8月家里蹲',
+        '9月开学啦',
+        '10月好好学习天天向上',
+        '11月加油考试',
+        '12月写总结，哈哈哈'] //我的坑：没加单引号
 
         var tab = document.getElementById('tab');
         var aBtn = tab.getElementsByTagName('li');
