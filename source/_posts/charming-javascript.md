@@ -411,7 +411,7 @@ for (var i=0; i<5; i++){  //1.初始化，条件，自增
 但是可以通过js来设置这个自定义属性，并且可以通过循环设置实现。
 
 ##### JS简易日历（innerHTML）
-```
+```html
  <script>
     window.onload = function() {
         var arr = [
