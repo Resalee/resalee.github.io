@@ -425,7 +425,7 @@ alert(a.join('--'));//[1--2--3--4]
 ```
 
 ### 定时器的使用
-####开启定时器
+#### 开启定时器
 1、setInterval 间隔型：每隔一段时间执行某个函数（多次）
 ```js
 function show(){
@@ -442,7 +442,7 @@ function show() {
 setTimeout(show, 1000); //1秒后执行show函数
 ```
 
-####停止定时器
+#### 停止定时器
 1、clearInterval：关闭某个间隔型定时器
 ```html
 <script>
