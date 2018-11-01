@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next mist use-motion" lang="zh-Hans">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="tools,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="0、目前需求： 编辑css/html/JavaScript页面 用Markdown写文章 在多台终端上同步使用  1、安装sublime text 3下载sublime text 3，解压到自己想放软件的地方。PS.测试通过坚果云同步软件，但会带来使用不便，有时候会有文件冲突，所以做好基本配置后，可以打包一份上传到云，需要时再下载，后期的改动基本上是插件方面的。Atom可以同步，不过没怎么倒腾。">
+<meta name="keywords" content="tools">
+<meta property="og:type" content="article">
+<meta property="og:title" content="配置sublime text 3">
+<meta property="og:url" content="http://yoursite.com/2017/11/01/sublime-text-3/index.html">
+<meta property="og:site_name" content="海底火山">
+<meta property="og:description" content="0、目前需求： 编辑css/html/JavaScript页面 用Markdown写文章 在多台终端上同步使用  1、安装sublime text 3下载sublime text 3，解压到自己想放软件的地方。PS.测试通过坚果云同步软件，但会带来使用不便，有时候会有文件冲突，所以做好基本配置后，可以打包一份上传到云，需要时再下载，后期的改动基本上是插件方面的。Atom可以同步，不过没怎么倒腾。">
+<meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2018-11-01T08:46:50.584Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="配置sublime text 3">
+<meta name="twitter:description" content="0、目前需求： 编辑css/html/JavaScript页面 用Markdown写文章 在多台终端上同步使用  1、安装sublime text 3下载sublime text 3，解压到自己想放软件的地方。PS.测试通过坚果云同步软件，但会带来使用不便，有时候会有文件冲突，所以做好基本配置后，可以打包一份上传到云，需要时再下载，后期的改动基本上是插件方面的。Atom可以同步，不过没怎么倒腾。">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Mist',
+    version: '5.1.3',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2017/11/01/sublime-text-3/">
+
+
+
+
+
+  <title>配置sublime text 3 | 海底火山</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">海底火山</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            归档
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/11/01/sublime-text-3/">
+
+    <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Resa Lee">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope="" itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="海底火山">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">配置sublime text 3</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-01T22:24:00+08:00">
+                2017-11-01
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="0、目前需求："><a href="#0、目前需求：" class="headerlink" title="0、目前需求："></a>0、目前需求：</h2><ul>
+<li>编辑css/html/JavaScript页面</li>
+<li>用Markdown写文章</li>
+<li>在多台终端上同步使用</li>
+</ul>
+<h2 id="1、安装sublime-text-3"><a href="#1、安装sublime-text-3" class="headerlink" title="1、安装sublime text 3"></a>1、安装sublime text 3</h2><p><a href="http://www.sublimetext.com/3" target="_blank" rel="noopener">下载sublime text 3</a>，解压到自己想放软件的地方。<br>PS.测试通过坚果云同步软件，但会带来使用不便，有时候会有文件冲突，所以做好基本配置后，可以打包一份上传到云，需要时再下载，后期的改动基本上是插件方面的。Atom可以同步，不过没怎么倒腾。</p>
+<h2 id="2、基本设置"><a href="#2、基本设置" class="headerlink" title="2、基本设置"></a>2、基本设置</h2><p>点击菜单栏Preferences-Settings，会弹出默认设置文件和用户设置文件，可以在用户设置文件里进行一些选项的设置：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    // 设置主题，下载主题后，可以通过Preferences-Color Schemes选择主题</span><br><span class="line">    &quot;color_scheme&quot;: &quot;Packages/Boxy Theme/schemes/Boxy Monokai.tmTheme&quot;,</span><br><span class="line">    // 设置Sans-serif（无衬线）等宽字体，以便阅读</span><br><span class="line">    &quot;font_face&quot;: &quot;YaHei Consolas Hybrid&quot;,</span><br><span class="line">    &quot;font_size&quot;: 12,</span><br><span class="line">    // 使光标闪动更加柔和</span><br><span class="line">    &quot;caret_style&quot;: &quot;phase&quot;,</span><br><span class="line">    // 高亮当前行</span><br><span class="line">    &quot;highlight_line&quot;: true,</span><br><span class="line">    // 高亮有修改的标签</span><br><span class="line">    &quot;highlight_modified_tabs&quot;: true,</span><br><span class="line">    // 设置tab的大小为2</span><br><span class="line">    &quot;tab_size&quot;: 2,</span><br><span class="line">    // 使用空格代替tab</span><br><span class="line">    &quot;translate_tabs_to_spaces&quot;: true,</span><br><span class="line">    // 添加行宽标尺</span><br><span class="line">    &quot;rulers&quot;: [80, 100],</span><br><span class="line">    // 显示空白字符</span><br><span class="line">    &quot;draw_white_space&quot;: &quot;all&quot;,</span><br><span class="line">    // 保存时自动去除行末空白</span><br><span class="line">    &quot;trim_trailing_white_space_on_save&quot;: true,</span><br><span class="line">    // 保存时自动增加文件末尾换行</span><br><span class="line">    &quot;ensure_newline_at_eof_on_save&quot;: true,</span><br><span class="line">    &quot;ignored_packages&quot;:</span><br><span class="line">    [</span><br><span class="line">        &quot;Vintage&quot;,</span><br><span class="line">        &quot;Markdown&quot;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>sublime key settings设置光标跳出括号Preferences-Key Bindings，在右侧的user文件内输入：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[</span><br><span class="line">    &#123;&quot;keys&quot;: [&quot;enter&quot;], &quot;command&quot;: &quot;move&quot;, &quot;args&quot;: &#123;&quot;by&quot;: &quot;characters&quot;, &quot;forward&quot;: true&#125;, &quot;context&quot;:</span><br><span class="line">        [</span><br><span class="line">            &#123; &quot;key&quot;: &quot;following_text&quot;, &quot;operator&quot;: &quot;regex_contains&quot;, &quot;operand&quot;: &quot;^[)\\]\\&gt;\\&apos;\\\&quot;\\ %&gt;\\&#125;\\;\\,]&quot;, &quot;match_all&quot;: true &#125;,</span><br><span class="line">            &#123; &quot;key&quot;: &quot;preceding_text&quot;, &quot;operator&quot;: &quot;not_regex_match&quot;, &quot;operand&quot;: &quot;^.*\\&#123;$&quot;, &quot;match_all&quot;: true  &#125;,</span><br><span class="line">            &#123; &quot;key&quot;: &quot;auto_complete_visible&quot;, &quot;operator&quot;: &quot;equal&quot;, &quot;operand&quot;: false &#125;</span><br><span class="line">        ]</span><br><span class="line">    &#125;</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+<h2 id="3、安装插件"><a href="#3、安装插件" class="headerlink" title="3、安装插件"></a>3、安装插件</h2><h3 id="3-1-安装package-control"><a href="#3-1-安装package-control" class="headerlink" title="3.1 安装package control"></a>3.1 安装package control</h3><p>参考<a href="https://packagecontrol.io/installation" target="_blank" rel="noopener">Package Control</a>官网页面进行安装，在线方法为：打开sublime，<code>Ctrl+`</code>调出控制台，复制下列代码，Enter：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">import urllib.request,os,hashlib; h = &apos;6f4c264a24d933ce70df5dedcf1dcaee&apos; + &apos;ebe013ee18cced0ef93d5f746d80ef60&apos;; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &apos;http://packagecontrol.io/&apos; + pf.replace(&apos; &apos;, &apos;%20&apos;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&apos;Error validating download (got %s instead of %s), please try manual install&apos; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &apos;wb&apos; ).write(by)</span><br></pre></td></tr></table></figure>
+<p>我没有装成功，采用官网右侧Manual提示的方法：</p>
+<ul>
+<li>在官网下载<a href="https://packagecontrol.io/Package%20Control.sublime-package" target="_blank" rel="noopener">Package Control.sublime-package</a></li>
+<li>点击sublime菜单栏：<code>Preferences - Browse Packages</code>，回到文件夹的上一级菜单，打开<code>Installed Packages</code>文件夹</li>
+<li>把下载的Package Control.sublime-package放进Installed Packages文件夹</li>
+<li>重启sublime</li>
+</ul>
+<p>这个方法成功了，点击菜单栏Preferences可以看到Package Control选项了。</p>
+<h3 id="3-2-下载安装插件"><a href="#3-2-下载安装插件" class="headerlink" title="3.2 下载安装插件"></a>3.2 下载安装插件</h3><p><code>Ctrl+Shift+P</code>呼出命令板，点击Package Control: Install Package（或输入PCI快速定位），安装自己需要的插件、主题等。下面是我参考挑的一些自己可能需要的：</p>
+<p><a href="http://weslly.github.io/ColorPicker/" target="_blank" rel="noopener">ColorPicker</a>：<br>颜色选择器，快捷键<code>Ctrl / Cmd + Shift + C</code></p>
+<p><a href="https://github.com/SublimeLinter" target="_blank" rel="noopener">SublimeLinter插件</a>：高亮提示用户编写的代码中存在的不规范和错误的写法。具体的使用可以参见：<a href="http://www.cnblogs.com/lhb25/archive/2013/05/02/sublimelinter-for-js-css-coding.html" target="_blank" rel="noopener">借助 SublimeLinter 编写高质量的 JavaScript &amp; CSS 代码</a></p>
+<p><a href="https://github.com/victorporof/Sublime-HTMLPrettify" target="_blank" rel="noopener">HTML-CSS-JS Prettify</a>：集成了格式化（美化）html、css、js三种文件类型的插件。插件依赖于nodejs，因此需要事先安装nodejs，然后才可以正常运行。插件安装完成后，快捷键ctrl+shift+H完成当前文件的美化操作。使用可以参见<a href="http://frontenddev.org/article/sublime-does-text-three-plug-ins-html-and-css-js-prettify.html" target="_blank" rel="noopener">这篇</a>介绍。</p>
+<p><a href="https://github.com/csscomb/CSScomb-for-Sublime" target="_blank" rel="noopener">CSScomb CSS属性排序</a>：选中要排序的CSS代码，按<code>Ctrl+Shift+C</code>，即可对CSS属性重新排序了，代码从此简洁有序易维护，如果不款选代码则插件将排序文件中所有的CSS属性。当然，可以自己自定义CSS属性排序规则，打开插件目录里的CSScomb.sublime-settings文件，更改里面的CSS属性顺序就行了。因为这个插件使用PHP写的，要使他工作需要在环境变量中添加PHP的路径，具体请看github上的说明。</p>
+<p><a href="https://github.com/spadgos/sublime-jsdocs:" target="_blank" rel="noopener">DocBlockr</a> 代码块注释：可以快速的对函数进行注释。保持代码规范。</p>
+<ul>
+<li>/*:回车创建一个代码块注释</li>
+<li>/**:回车在自动查找函数中的形参等等。</li>
+</ul>
+<p><a href="https://github.com/skuroda/Sublime-AdvancedNewFile" target="_blank" rel="noopener">advancedNewFile</a> ：快速创建文件，运用快捷键<code>command+alt+n</code>(win: <code>ctrl+alt+n</code>)，Sublime Text底部会弹出输入框；我们只需在这个输入框里输入我们需要新建的文件名回车即可（我们甚至可以带路径,譬如:<em>src/components/perfect.vue</em>;这就会在当前项目目录下，建立该文件；需要注意的是这路径前面不可加 ‘/‘, 这会使得建立的路径成为用户目录，而非改项目目录）。默认情况下文件会存储在当前目录，如果当前没有目录，会存储在用户的家目录。</p>
+<p><a href="https://github.com/emmetio/emmet" target="_blank" rel="noopener">Emmet</a>：在线没安装成功，下载GitHub上的zip文件，解压到安装文件夹中的Packages文件夹内（可通过Preferences-Browser Packages打开文件夹）。使用emmet需要安装PyV8，如果在线自动安装失败，也可以通过手动<a href="https://github.com/emmetio/pyv8-binaries" target="_blank" rel="noopener">下载安装</a>，解压到<code>Installed Packages/PyV8（PyV8这个文件夹要新建）</code>。使用参考：<a href="http://www.w3cplus.com/tools/using-emmet-speed-front-end-web-development.html" target="_blank" rel="noopener">使用Emmet加速Web前端开发</a></p>
+<p><a href="https://github.com/jdc0589/JsFormat" target="_blank" rel="noopener">JsFormat</a>：将JS格式化的插件，可在JS文件中通过鼠标右键-&gt;JsFormat或键盘快捷键Ctrl+Alt+F对JS进行格式化。</p>
+<p>Markdown Editing + MarkdownLivePreview：安装这两款插件后，重启sublime，进行设置：Preferences-Package Settings-MarkdownLivePreview-Setting，设置Markdown GFM Settings - User（也可以这样设置standard和multi的，这里的主题是我下载的sublime主题，可以换成你自己喜欢的主题）：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&#123;   </span><br><span class="line">    // 修改主题，应用sublime主题，而不是markdownediting原有的主题</span><br><span class="line">    &quot;color_scheme&quot;: &quot;Packages/Boxy Theme/schemes/Boxy Monokai.tmTheme&quot;,</span><br><span class="line">    // Layout</span><br><span class="line">    &quot;draw_centered&quot;: false, // 改为false，原始值为true，使页面靠左显示</span><br><span class="line">    &quot;word_wrap&quot;: true,</span><br><span class="line">    &quot;wrap_width&quot;: 120, // 每行字符数上限</span><br><span class="line">    &quot;rulers&quot;: [],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>使用快捷键<code>alt+M</code>可以实时预览markdown文件，赶脚有点卡。</p>
+<h2 id="4、接下来需要"><a href="#4、接下来需要" class="headerlink" title="4、接下来需要"></a>4、接下来需要</h2><ul>
+<li>熟悉插件的快捷使用方法</li>
+<li>熟悉更多sublime快捷键的使用</li>
+</ul>
+<h2 id="参考资料："><a href="#参考资料：" class="headerlink" title="参考资料："></a>参考资料：</h2><p><a href="http://zh.lucida.me/blog/sublime-text-complete-guide/" target="_blank" rel="noopener">Sublime Text 全程指南</a><br><a href="https://jeffjade.com/2015/12/15/2015-04-17-toss-sublime-text/#" target="_blank" rel="noopener">如何优雅地使用Sublime Text3</a><br><a href="http://www.cnblogs.com/hykun/p/sublimeText3.html" target="_blank" rel="noopener">Sublime Text 3前端开发常用优秀插件介绍</a><br><a href="https://github.com/jikeytang/sublime-text" target="_blank" rel="noopener">Sublime Text的心得经验</a><br><a href="http://www.cnblogs.com/james-lee/p/6847906.html" target="_blank" rel="noopener">Sublime Text3 + Markdown + 实时预览</a><br><a href="http://blog.csdn.net/hfut_jf/article/details/52853868" target="_blank" rel="noopener">Sublime Text 3 MarkdownEditing布局设置</a><br><a href="http://tmtheme-editor.herokuapp.com" target="_blank" rel="noopener">Sublime Text主题在线修改</a></p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/tools/" rel="tag"># tools</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/11/01/hexo-github-blog/" rel="next" title="Hexo+GitHub博客搭建，多终端同步方案">
+                <i class="fa fa-chevron-left"></i> Hexo+GitHub博客搭建，多终端同步方案
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2018/01/05/charming-javascript/" rel="prev" title="JavaScript从入门到精通：初探JavaScript魅力">
+                JavaScript从入门到精通：初探JavaScript魅力 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">Resa Lee</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">日志</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">标签</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          <div class="links-of-author motion-element">
+            
+          </div>
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#0、目前需求："><span class="nav-number">1.</span> <span class="nav-text">0、目前需求：</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1、安装sublime-text-3"><span class="nav-number">2.</span> <span class="nav-text">1、安装sublime text 3</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、基本设置"><span class="nav-number">3.</span> <span class="nav-text">2、基本设置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、安装插件"><span class="nav-number">4.</span> <span class="nav-text">3、安装插件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#3-1-安装package-control"><span class="nav-number">4.1.</span> <span class="nav-text">3.1 安装package control</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-2-下载安装插件"><span class="nav-number">4.2.</span> <span class="nav-text">3.2 下载安装插件</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、接下来需要"><span class="nav-number">5.</span> <span class="nav-text">4、接下来需要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#参考资料："><span class="nav-number">6.</span> <span class="nav-text">参考资料：</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Resa Lee</span>
+
+  
+</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
