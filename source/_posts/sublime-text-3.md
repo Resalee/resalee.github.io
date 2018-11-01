@@ -10,6 +10,8 @@ tags: [tools]
 - 用Markdown写文章
 - 在多台终端上同步使用
 
+<!-- more -->
+
 ## 1、安装sublime text 3
 
 [下载sublime text 3](http://www.sublimetext.com/3)，解压到自己想放软件的地方。
