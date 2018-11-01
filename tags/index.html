@@ -109,19 +109,20 @@
 
 
   <meta property="og:type" content="website">
-<meta property="og:title" content="海底火山">
-<meta property="og:url" content="http://yoursite.com/archives/2017/index.html">
+<meta property="og:title" content="tags">
+<meta property="og:url" content="http://yoursite.com/tags/index.html">
 <meta property="og:site_name" content="海底火山">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-11-01T09:27:41.987Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="海底火山">
+<meta name="twitter:title" content="tags">
 
 
 
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2017/">
+  <link rel="canonical" href="http://yoursite.com/tags/">
 
 
 
@@ -131,7 +132,7 @@
   };
 </script>
 
-  <title>归档 | 海底火山</title>
+  <title>tags | 海底火山</title>
   
 
 
@@ -180,7 +181,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope="" itemtype="http://schema.org/WPHeader">
@@ -225,7 +226,7 @@
         
         
           
-          <li class="menu-item menu-item-tags">
+          <li class="menu-item menu-item-tags menu-item-active">
     <a href="/tags/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
   </li>
@@ -233,7 +234,7 @@
         
         
           
-          <li class="menu-item menu-item-archives menu-item-active">
+          <li class="menu-item menu-item-archives">
     <a href="/archives/" rel="section">
       <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
   </li>
@@ -286,113 +287,86 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+    
+    
+    <div class="post-block page">
+      <header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">tags</h1>
+
+<div class="post-meta">
   
   
-  
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
+
+
+
+</div>
+
+</header>
 
       
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        嗯..! 目前共计 4 篇日志。 继续努力。
-      </span>
       
-
       
-
+      <div class="post-body">
         
         
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2017">2017</h1>
+          <div class="tag-cloud">
+            <div class="tag-cloud-title">
+                
+                
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                  
+                    
+                  
+                
+                目前共计 4 个标签
+            </div>
+            <div class="tag-cloud-tags">
+              <a href="/tags/Github/" style="font-size: 12px; color: #ccc">Github</a> <a href="/tags/JavaScript/" style="font-size: 30px; color: #111">JavaScript</a> <a href="/tags/hexo/" style="font-size: 12px; color: #ccc">hexo</a> <a href="/tags/tools/" style="font-size: 12px; color: #ccc">tools</a>
+            </div>
           </div>
         
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/01/sublime-text-3/" itemprop="url">
-              
-                <span itemprop="name">配置sublime text 3</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-11-01T22:24:00+08:00" content="2017-11-01">
-          11-01
-        </time>
       </div>
-
-    </header>
-  </article>
-
-
-
       
-
-        
-        
-        
-
-        
-        
-
-        
-
-  <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/11/01/hexo-github-blog/" itemprop="url">
-              
-                <span itemprop="name">Hexo+GitHub博客搭建，多终端同步方案</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated" datetime="2017-11-01T11:33:18+08:00" content="2017-11-01">
-          11-01
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
       
-
+      
     </div>
+    
+
+
+
+    
+    
+    
   </div>
-  
-  
-  
-
-  
-
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
+
+  
+
+
 
         </div>
         
@@ -608,6 +582,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
+
+
 
   
 
@@ -637,6 +615,30 @@
 
     
 
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'resalee',
+            repo: 'resalee.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '2bde2c11ad68e6eeed291f8c99add2e3b32c68c3',
+            
+                client_id: '019f54a8e0b71cecbaf1'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
     
 
 

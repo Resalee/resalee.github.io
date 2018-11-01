@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +50,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
 
 
 
@@ -50,47 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="hexo,Github,">
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="之前搭建过一次，但是没有备份hexo设置，小白看了一圈，还是要重来，首要问题就是解决hexo文件同步，通过GitHub仓库建立两个分支，master是发布的博客文件，hexo分支放hexo文件。记录一下过程，所用系统都是windows的。 1、基础环境配置1.1 安装node.js在node.js官网下载并根据提示安装。 1.2 安装git在git官网下载并根据提示安装，记得第一次安装时，有两个安">
-<meta name="keywords" content="hexo,Github">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Hexo+GitHub博客搭建，多终端同步方案">
-<meta property="og:url" content="http://yoursite.com/2017/11/01/hexo-github-blog/index.html">
-<meta property="og:site_name" content="海底火山">
-<meta property="og:description" content="之前搭建过一次，但是没有备份hexo设置，小白看了一圈，还是要重来，首要问题就是解决hexo文件同步，通过GitHub仓库建立两个分支，master是发布的博客文件，hexo分支放hexo文件。记录一下过程，所用系统都是windows的。 1、基础环境配置1.1 安装node.js在node.js官网下载并根据提示安装。 1.2 安装git在git官网下载并根据提示安装，记得第一次安装时，有两个安">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-01T06:39:32.954Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo+GitHub博客搭建，多终端同步方案">
-<meta name="twitter:description" content="之前搭建过一次，但是没有备份hexo设置，小白看了一圈，还是要重来，首要问题就是解决hexo文件同步，通过GitHub仓库建立两个分支，master是发布的博客文件，hexo分支放hexo文件。记录一下过程，所用系统都是windows的。 1、基础环境配置1.1 安装node.js在node.js官网下载并根据提示安装。 1.2 安装git在git官网下载并根据提示安装，记得第一次安装时，有两个安">
 
 
 
@@ -99,15 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '5.1.3',
+    version: '6.5.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -119,12 +103,38 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="之前搭建过一次，但是没有备份hexo设置，小白看了一圈，还是要重来，首要问题就是解决hexo文件同步，通过GitHub仓库建立两个分支，master是发布的博客文件，hexo分支放hexo文件。记录一下过程，所用系统都是windows的。">
+<meta name="keywords" content="hexo,Github">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo+GitHub博客搭建，多终端同步方案">
+<meta property="og:url" content="http://yoursite.com/2017/11/01/hexo-github-blog/index.html">
+<meta property="og:site_name" content="海底火山">
+<meta property="og:description" content="之前搭建过一次，但是没有备份hexo设置，小白看了一圈，还是要重来，首要问题就是解决hexo文件同步，通过GitHub仓库建立两个分支，master是发布的博客文件，hexo分支放hexo文件。记录一下过程，所用系统都是windows的。">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-11-01T09:56:27.808Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Hexo+GitHub博客搭建，多终端同步方案">
+<meta name="twitter:description" content="之前搭建过一次，但是没有备份hexo设置，小白看了一圈，还是要重来，首要问题就是解决hexo文件同步，通过GitHub仓库建立两个分支，master是发布的博客文件，hexo分支放hexo文件。记录一下过程，所用系统都是windows的。">
+
+
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/2017/11/01/hexo-github-blog/">
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>Hexo+GitHub博客搭建，多终端同步方案 | 海底火山</title>
   
@@ -136,9 +146,39 @@
 
 
 
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -160,13 +200,11 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -174,35 +212,45 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
-      
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -210,12 +258,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -226,6 +282,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -250,11 +308,19 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Hexo+GitHub博客搭建，多终端同步方案</h1>
+          <h1 class="post-title" itemprop="name headline">Hexo+GitHub博客搭建，多终端同步方案
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -262,19 +328,46 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-01T11:33:18+08:00">
-                2017-11-01
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-11-01 11:33:18" itemprop="dateCreated datePublished" datetime="2017-11-01T11:33:18+08:00">2017-11-01</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-01 17:56:27" itemprop="dateModified" datetime="2018-11-01T17:56:27+08:00">2018-11-01</time>
+              
             
           </span>
 
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/01/hexo-github-blog/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2017/11/01/hexo-github-blog/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -300,7 +393,7 @@
       
 
       
-        <p>之前搭建过一次，但是没有备份hexo设置，小白看了一圈，还是要重来，首要问题就是解决hexo文件同步，通过GitHub仓库建立两个分支，master是发布的博客文件，hexo分支放hexo文件。记录一下过程，所用系统都是windows的。</p>
+        <p>之前搭建过一次，但是没有备份hexo设置，小白看了一圈，还是要重来，首要问题就是解决hexo文件同步，通过GitHub仓库建立两个分支，master是发布的博客文件，hexo分支放hexo文件。记录一下过程，所用系统都是windows的。<br><a id="more"></a></p>
 <h2 id="1、基础环境配置"><a href="#1、基础环境配置" class="headerlink" title="1、基础环境配置"></a>1、基础环境配置</h2><h3 id="1-1-安装node-js"><a href="#1-1-安装node-js" class="headerlink" title="1.1 安装node.js"></a>1.1 安装node.js</h3><p>在<a href="https://nodejs.org/en/" target="_blank" rel="noopener">node.js官网</a>下载并根据提示安装。</p>
 <h3 id="1-2-安装git"><a href="#1-2-安装git" class="headerlink" title="1.2 安装git"></a>1.2 安装git</h3><p>在<a href="https://git-scm.com/" target="_blank" rel="noopener">git官网</a>下载并根据提示安装，记得第一次安装时，有两个安装包需要安装，一个是git-lfs-windows，还有一个是git客户端。</p>
 <h3 id="1-3-配置ssh-key"><a href="#1-3-配置ssh-key" class="headerlink" title="1.3 配置ssh-key"></a>1.3 配置ssh-key</h3><ul>
@@ -394,9 +487,29 @@
 <li><a href="http://lowrank.science/Hexo-Migration/" target="_blank" rel="noopener">多机更新 Hexo 博客</a></li>
 <li><a href="https://formulahendry.github.io/2016/12/04/hexo-ci/" target="_blank" rel="noopener">Hexo的版本控制与持续集成</a> <code>待实践</code></li>
 </ul>
+<hr>
+<p>2018-11-1更新：</p>
+<h2 id="9、hexo更新"><a href="#9、hexo更新" class="headerlink" title="9、hexo更新"></a>9、hexo更新</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm i hexo-cli -g</span><br></pre></td></tr></table></figure>
+<p>参考：</p>
+<ul>
+<li><a href="https://hexo.io/" target="_blank" rel="noopener">Hexo官网</a></li>
+<li><a href="https://hexo.io/zh-cn/docs/" target="_blank" rel="noopener">Hexo文档</a></li>
+<li><a href="http://zerosoul.github.io/2016/06/15/upgrade-hexo-to-3-2/" target="_blank" rel="noopener">Hexo升级之坑</a></li>
+</ul>
+<h2 id="10、next主题更新"><a href="#10、next主题更新" class="headerlink" title="10、next主题更新"></a>10、next主题更新</h2><p>之前是5.1.3版本的，直接升级发现木有变化，后来发现有6.0以上版本了，由于上次没有做多少配置，我直接删掉了原文件夹，然后重新安装next了：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd your-hexo-site</span><br><span class="line">$ git clone https://github.com/iissnan/hexo-theme-next themes/next</span><br></pre></td></tr></table></figure></p>
+<p>参考：</p>
+<ul>
+<li><a href="https://github.com/theme-next/hexo-theme-next" target="_blank" rel="noopener">Next github</a></li>
+<li>配置参考：<a href="https://juejin.im/entry/59e862ee6fb9a04517044f72" target="_blank" rel="noopener">让你的Hexo博客华丽升级</a></li>
+<li><a href="https://my.oschina.net/m1c3/blog/1622488" target="_blank" rel="noopener">Hexo Next主题5.X升级至6.X</a></li>
+<li><a href="https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/UPDATE-FROM-5.1.X.md" target="_blank" rel="noopener">从 NexT v5.1.x 更新</a></li>
+</ul>
 
       
     </div>
+
+    
+
     
     
     
@@ -450,18 +563,18 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
           
 
-
-          
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
 
   
 
@@ -504,46 +617,57 @@
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">4</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
+                <div class="site-state-item site-state-posts">
                 
-                  <span class="site-state-item-count">4</span>
-                  <span class="site-state-item-name">标签</span>
+                  <a href="/archives/">
                 
-              </div>
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
             
-
-          </nav>
-
           
-
-          <div class="links-of-author motion-element">
-            
-          </div>
-
-          
-          
-
-          
-          
-
           
 
         </div>
@@ -559,7 +683,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、基础环境配置"><span class="nav-number">1.</span> <span class="nav-text">1、基础环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-安装node-js"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 安装node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-安装git"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 安装git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-配置ssh-key"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 配置ssh-key</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、github配置"><span class="nav-number">2.</span> <span class="nav-text">2、github配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、安装hexo"><span class="nav-number">3.</span> <span class="nav-text">3、安装hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、关联hexo与GitHub"><span class="nav-number">4.</span> <span class="nav-text">4、关联hexo与GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-修改hexo全局配置文件"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 修改hexo全局配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-hexo源码备份"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 hexo源码备份</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、其他终端配置"><span class="nav-number">5.</span> <span class="nav-text">5、其他终端配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、不同终端博客更新"><span class="nav-number">6.</span> <span class="nav-text">6、不同终端博客更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、其他设置"><span class="nav-number">7.</span> <span class="nav-text">7、其他设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-hexo配置修改"><span class="nav-number">7.1.</span> <span class="nav-text">7.1 hexo配置修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-主题修改"><span class="nav-number">7.2.</span> <span class="nav-text">7.2 主题修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、参考资料"><span class="nav-number">8.</span> <span class="nav-text">8、参考资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1、基础环境配置"><span class="nav-number">1.</span> <span class="nav-text">1、基础环境配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-1-安装node-js"><span class="nav-number">1.1.</span> <span class="nav-text">1.1 安装node.js</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-2-安装git"><span class="nav-number">1.2.</span> <span class="nav-text">1.2 安装git</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-3-配置ssh-key"><span class="nav-number">1.3.</span> <span class="nav-text">1.3 配置ssh-key</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2、github配置"><span class="nav-number">2.</span> <span class="nav-text">2、github配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3、安装hexo"><span class="nav-number">3.</span> <span class="nav-text">3、安装hexo</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4、关联hexo与GitHub"><span class="nav-number">4.</span> <span class="nav-text">4、关联hexo与GitHub</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#4-1-修改hexo全局配置文件"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 修改hexo全局配置文件</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-2-hexo源码备份"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 hexo源码备份</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5、其他终端配置"><span class="nav-number">5.</span> <span class="nav-text">5、其他终端配置</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6、不同终端博客更新"><span class="nav-number">6.</span> <span class="nav-text">6、不同终端博客更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#7、其他设置"><span class="nav-number">7.</span> <span class="nav-text">7、其他设置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#7-1-hexo配置修改"><span class="nav-number">7.1.</span> <span class="nav-text">7.1 hexo配置修改</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#7-2-主题修改"><span class="nav-number">7.2.</span> <span class="nav-text">7.2 主题修改</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#8、参考资料"><span class="nav-number">8.</span> <span class="nav-text">8、参考资料</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#9、hexo更新"><span class="nav-number">9.</span> <span class="nav-text">9、hexo更新</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#10、next主题更新"><span class="nav-number">10.</span> <span class="nav-text">10、next主题更新</span></a></li></ol></div>
             
 
           </div>
@@ -579,17 +703,21 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Resa Lee</span>
 
   
+
+  
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
@@ -597,12 +725,13 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.5.0</div>
 
 
 
 
         
+
 
 
 
@@ -622,7 +751,10 @@
     
 
     
+	
+    
 
+    
   </div>
 
   
@@ -641,7 +773,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -661,16 +797,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -679,18 +805,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
 
 
 
@@ -698,35 +819,19 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
 
 
 
   
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
 
 
 
@@ -737,6 +842,41 @@
 
 
 
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'resalee',
+            repo: 'resalee.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '2bde2c11ad68e6eeed291f8c99add2e3b32c68c3',
+            
+                client_id: '019f54a8e0b71cecbaf1'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 
@@ -754,6 +894,16 @@
   
 
   
+
+  
+
+  
+
+  
+  
+
+  
+
   
 
   

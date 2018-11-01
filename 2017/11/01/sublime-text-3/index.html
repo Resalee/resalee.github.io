@@ -2,15 +2,27 @@
 
 
 
+
+
+
+
+
+
+
+
+
   
 
 
-<html class="theme-next mist use-motion" lang="zh-Hans">
+<html class="theme-next mist use-motion" lang="zh-CN">
 <head><meta name="generator" content="Hexo 3.8.0">
   <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
 <meta name="theme-color" content="#222">
+
+
+
 
 
 
@@ -38,10 +50,6 @@
 
 
 
-  
-  
-  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
-
 
 
 
@@ -50,47 +58,25 @@
 
 <link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
 
-<link href="/css/main.css?v=5.1.3" rel="stylesheet" type="text/css">
+<link href="/css/main.css?v=6.5.0" rel="stylesheet" type="text/css">
 
 
-  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.3">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=6.5.0">
 
 
-  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=6.5.0">
 
 
-  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.3">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=6.5.0">
 
 
-  <link rel="mask-icon" href="/images/logo.svg?v=5.1.3" color="#222">
-
-
-
-
-
-  <meta name="keywords" content="tools,">
+  <link rel="mask-icon" href="/images/logo.svg?v=6.5.0" color="#222">
 
 
 
 
 
 
-
-
-
-
-<meta name="description" content="0、目前需求： 编辑css/html/JavaScript页面 用Markdown写文章 在多台终端上同步使用  1、安装sublime text 3下载sublime text 3，解压到自己想放软件的地方。PS.测试通过坚果云同步软件，但会带来使用不便，有时候会有文件冲突，所以做好基本配置后，可以打包一份上传到云，需要时再下载，后期的改动基本上是插件方面的。Atom可以同步，不过没怎么倒腾。">
-<meta name="keywords" content="tools">
-<meta property="og:type" content="article">
-<meta property="og:title" content="配置sublime text 3">
-<meta property="og:url" content="http://yoursite.com/2017/11/01/sublime-text-3/index.html">
-<meta property="og:site_name" content="海底火山">
-<meta property="og:description" content="0、目前需求： 编辑css/html/JavaScript页面 用Markdown写文章 在多台终端上同步使用  1、安装sublime text 3下载sublime text 3，解压到自己想放软件的地方。PS.测试通过坚果云同步软件，但会带来使用不便，有时候会有文件冲突，所以做好基本配置后，可以打包一份上传到云，需要时再下载，后期的改动基本上是插件方面的。Atom可以同步，不过没怎么倒腾。">
-<meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2018-11-01T08:46:50.584Z">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="配置sublime text 3">
-<meta name="twitter:description" content="0、目前需求： 编辑css/html/JavaScript页面 用Markdown写文章 在多台终端上同步使用  1、安装sublime text 3下载sublime text 3，解压到自己想放软件的地方。PS.测试通过坚果云同步软件，但会带来使用不便，有时候会有文件冲突，所以做好基本配置后，可以打包一份上传到云，需要时再下载，后期的改动基本上是插件方面的。Atom可以同步，不过没怎么倒腾。">
 
 
 
@@ -99,15 +85,13 @@
   var CONFIG = {
     root: '/',
     scheme: 'Mist',
-    version: '5.1.3',
+    version: '6.5.0',
     sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
-    fancybox: true,
+    fancybox: false,
+    fastclick: false,
+    lazyload: false,
     tabs: true,
     motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
-    duoshuo: {
-      userId: '0',
-      author: '博主'
-    },
     algolia: {
       applicationID: '',
       apiKey: '',
@@ -119,12 +103,38 @@
 </script>
 
 
+  
+
+
+
+
+  <meta name="description" content="0、目前需求： 编辑css/html/JavaScript页面 用Markdown写文章 在多台终端上同步使用">
+<meta name="keywords" content="tools">
+<meta property="og:type" content="article">
+<meta property="og:title" content="配置sublime text 3">
+<meta property="og:url" content="http://yoursite.com/2017/11/01/sublime-text-3/index.html">
+<meta property="og:site_name" content="海底火山">
+<meta property="og:description" content="0、目前需求： 编辑css/html/JavaScript页面 用Markdown写文章 在多台终端上同步使用">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-11-01T09:45:31.986Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="配置sublime text 3">
+<meta name="twitter:description" content="0、目前需求： 编辑css/html/JavaScript页面 用Markdown写文章 在多台终端上同步使用">
+
+
+
+
+
 
   <link rel="canonical" href="http://yoursite.com/2017/11/01/sublime-text-3/">
 
 
 
-
+<script type="text/javascript" id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
 
   <title>配置sublime text 3 | 海底火山</title>
   
@@ -136,9 +146,39 @@
 
 
 
+
+
+
+  <noscript>
+  <style type="text/css">
+    .use-motion .motion-element,
+    .use-motion .brand,
+    .use-motion .menu-item,
+    .sidebar-inner,
+    .use-motion .post-block,
+    .use-motion .pagination,
+    .use-motion .comments,
+    .use-motion .post-header,
+    .use-motion .post-body,
+    .use-motion .collection-title { opacity: initial; }
+
+    .use-motion .logo,
+    .use-motion .site-title,
+    .use-motion .site-subtitle {
+      opacity: initial;
+      top: initial;
+    }
+
+    .use-motion {
+      .logo-line-before i { left: initial; }
+      .logo-line-after i { right: initial; }
+    }
+  </style>
+</noscript>
+
 </head>
 
-<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-Hans">
+<body itemscope="" itemtype="http://schema.org/WebPage" lang="zh-CN">
 
   
   
@@ -160,13 +200,11 @@
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
-      
-        <p class="site-subtitle"></p>
-      
+    
   </div>
 
   <div class="site-nav-toggle">
-    <button>
+    <button aria-label="切换导航栏">
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
       <span class="btn-bar"></span>
@@ -174,35 +212,45 @@
   </div>
 </div>
 
-<nav class="site-nav">
-  
 
+
+<nav class="site-nav">
   
     <ul id="menu" class="menu">
       
         
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
-            
-            首页
-          </a>
-        </li>
-      
         
-        <li class="menu-item menu-item-archives">
-          <a href="/archives/" rel="section">
-            
-              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
-            
-            归档
-          </a>
-        </li>
-      
+        
+          
+          <li class="menu-item menu-item-home">
+    <a href="/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+    <a href="/tags/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+    <a href="/archives/" rel="section">
+      <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+  </li>
 
       
+      
     </ul>
+  
+
+  
+    
+
   
 
   
@@ -210,12 +258,20 @@
 
 
 
- </div>
+  
+
+
+
+</div>
     </header>
+
+    
+
 
     <main id="main" class="main">
       <div class="main-inner">
         <div class="content-wrap">
+          
           <div id="content" class="content">
             
 
@@ -226,6 +282,8 @@
 
   
   
+  
+
   
 
   <article class="post post-type-normal" itemscope="" itemtype="http://schema.org/Article">
@@ -250,11 +308,19 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">配置sublime text 3</h1>
+          <h1 class="post-title" itemprop="name headline">配置sublime text 3
+              
+            
+          </h1>
         
 
         <div class="post-meta">
           <span class="post-time">
+
+            
+            
+            
+
             
               <span class="post-meta-item-icon">
                 <i class="fa fa-calendar-o"></i>
@@ -262,19 +328,46 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-01T22:24:00+08:00">
-                2017-11-01
-              </time>
+
+              
+                
+              
+
+              <time title="创建时间：2017-11-01 22:24:00" itemprop="dateCreated datePublished" datetime="2017-11-01T22:24:00+08:00">2017-11-01</time>
             
 
             
+              
 
+              
+                
+                <span class="post-meta-divider">|</span>
+                
+
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">更新于</span>
+                
+                <time title="修改时间：2018-11-01 17:45:31" itemprop="dateModified" datetime="2018-11-01T17:45:31+08:00">2018-11-01</time>
+              
             
           </span>
 
           
 
           
+            
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+                <a href="/2017/11/01/sublime-text-3/#comments" itemprop="discussionUrl">
+                  <span class="post-meta-item-text">评论数：</span> <span class="post-comments-count gitment-comments-count" data-xid="/2017/11/01/sublime-text-3/" itemprop="commentsCount"></span>
+                </a>
+              </span>
             
           
 
@@ -305,6 +398,7 @@
 <li>用Markdown写文章</li>
 <li>在多台终端上同步使用</li>
 </ul>
+<a id="more"></a>
 <h2 id="1、安装sublime-text-3"><a href="#1、安装sublime-text-3" class="headerlink" title="1、安装sublime text 3"></a>1、安装sublime text 3</h2><p><a href="http://www.sublimetext.com/3" target="_blank" rel="noopener">下载sublime text 3</a>，解压到自己想放软件的地方。<br>PS.测试通过坚果云同步软件，但会带来使用不便，有时候会有文件冲突，所以做好基本配置后，可以打包一份上传到云，需要时再下载，后期的改动基本上是插件方面的。Atom可以同步，不过没怎么倒腾。</p>
 <h2 id="2、基本设置"><a href="#2、基本设置" class="headerlink" title="2、基本设置"></a>2、基本设置</h2><p>点击菜单栏Preferences-Settings，会弹出默认设置文件和用户设置文件，可以在用户设置文件里进行一些选项的设置：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    // 设置主题，下载主题后，可以通过Preferences-Color Schemes选择主题</span><br><span class="line">    &quot;color_scheme&quot;: &quot;Packages/Boxy Theme/schemes/Boxy Monokai.tmTheme&quot;,</span><br><span class="line">    // 设置Sans-serif（无衬线）等宽字体，以便阅读</span><br><span class="line">    &quot;font_face&quot;: &quot;YaHei Consolas Hybrid&quot;,</span><br><span class="line">    &quot;font_size&quot;: 12,</span><br><span class="line">    // 使光标闪动更加柔和</span><br><span class="line">    &quot;caret_style&quot;: &quot;phase&quot;,</span><br><span class="line">    // 高亮当前行</span><br><span class="line">    &quot;highlight_line&quot;: true,</span><br><span class="line">    // 高亮有修改的标签</span><br><span class="line">    &quot;highlight_modified_tabs&quot;: true,</span><br><span class="line">    // 设置tab的大小为2</span><br><span class="line">    &quot;tab_size&quot;: 2,</span><br><span class="line">    // 使用空格代替tab</span><br><span class="line">    &quot;translate_tabs_to_spaces&quot;: true,</span><br><span class="line">    // 添加行宽标尺</span><br><span class="line">    &quot;rulers&quot;: [80, 100],</span><br><span class="line">    // 显示空白字符</span><br><span class="line">    &quot;draw_white_space&quot;: &quot;all&quot;,</span><br><span class="line">    // 保存时自动去除行末空白</span><br><span class="line">    &quot;trim_trailing_white_space_on_save&quot;: true,</span><br><span class="line">    // 保存时自动增加文件末尾换行</span><br><span class="line">    &quot;ensure_newline_at_eof_on_save&quot;: true,</span><br><span class="line">    &quot;ignored_packages&quot;:</span><br><span class="line">    [</span><br><span class="line">        &quot;Vintage&quot;,</span><br><span class="line">        &quot;Markdown&quot;</span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -344,6 +438,9 @@
 
       
     </div>
+
+    
+
     
     
     
@@ -399,18 +496,18 @@
   </article>
 
 
-
-    <div class="post-spread">
-      
-    </div>
   </div>
 
 
           </div>
           
 
-
-          
+  
+    <div class="comments" id="comments">
+      
+        <div id="gitment-container"></div>
+      
+    </div>
 
   
 
@@ -453,46 +550,57 @@
               <p class="site-description motion-element" itemprop="description"></p>
           </div>
 
-          <nav class="site-state motion-element">
-
-            
-              <div class="site-state-item site-state-posts">
+          
+            <nav class="site-state motion-element">
               
-                <a href="/archives/">
-              
-                  <span class="site-state-item-count">4</span>
-                  <span class="site-state-item-name">日志</span>
-                </a>
-              </div>
-            
-
-            
-
-            
-              
-              
-              <div class="site-state-item site-state-tags">
+                <div class="site-state-item site-state-posts">
                 
-                  <span class="site-state-item-count">4</span>
-                  <span class="site-state-item-name">标签</span>
+                  <a href="/archives/">
                 
-              </div>
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  <a href="/tags/index.html">
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">4</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
             
-
-          </nav>
-
           
-
-          <div class="links-of-author motion-element">
-            
-          </div>
-
-          
-          
-
-          
-          
-
           
 
         </div>
@@ -528,17 +636,21 @@
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2018</span>
-  <span class="with-love">
+        <div class="copyright"> &copy; <span itemprop="copyrightYear">2018</span>
+  <span class="with-love" id="animate">
     <i class="fa fa-user"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">Resa Lee</span>
 
   
+
+  
 </div>
 
 
-  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动</div>
+
+
+  <div class="powered-by">由 <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a> 强力驱动 v3.8.0</div>
 
 
 
@@ -546,12 +658,13 @@
 
 
 
-  <div class="theme-info">主题 &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Mist</a> v5.1.3</div>
+  <div class="theme-info">主题 – <a class="theme-link" target="_blank" href="https://theme-next.org">NexT.Mist</a> v6.5.0</div>
 
 
 
 
         
+
 
 
 
@@ -571,7 +684,10 @@
     
 
     
+	
+    
 
+    
   </div>
 
   
@@ -590,7 +706,11 @@
 
 
 
-  
+
+
+
+
+
 
 
 
@@ -610,16 +730,6 @@
 
   
   
-    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  
-
-  
-  
-    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
-  
-
-  
-  
     <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
   
 
@@ -628,18 +738,13 @@
     <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
   
 
-  
-  
-    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
-  
-
 
   
 
 
-  <script type="text/javascript" src="/js/src/utils.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/utils.js?v=6.5.0"></script>
 
-  <script type="text/javascript" src="/js/src/motion.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/motion.js?v=6.5.0"></script>
 
 
 
@@ -647,35 +752,19 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.3"></script>
-<script type="text/javascript" src="/js/src/post-details.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=6.5.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=6.5.0"></script>
 
 
 
   
 
 
-  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.3"></script>
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=6.5.0"></script>
 
 
 
   
-
-
-  
-
-
-
-
-	
-
-
-
-
-
-  
-
-
 
 
 
@@ -686,6 +775,41 @@
 
 
 
+<!-- LOCAL: You can save these files to your site and update links -->
+    
+        
+        <link rel="stylesheet" href="https://aimingoo.github.io/gitmint/style/default.css">
+        <script src="https://aimingoo.github.io/gitmint/dist/gitmint.browser.js"></script>
+    
+<!-- END LOCAL -->
+
+    
+
+    
+      <script type="text/javascript">
+      function renderGitment(){
+        var gitment = new Gitmint({
+            id: window.location.pathname,
+            owner: 'resalee',
+            repo: 'resalee.github.io',
+            
+            lang: "" || navigator.language || navigator.systemLanguage || navigator.userLanguage,
+            
+            oauth: {
+            
+            
+                client_secret: '2bde2c11ad68e6eeed291f8c99add2e3b32c68c3',
+            
+                client_id: '019f54a8e0b71cecbaf1'
+            }});
+        gitment.render('gitment-container');
+      }
+
+      
+      renderGitment();
+      
+      </script>
+    
 
 
 
@@ -703,6 +827,16 @@
   
 
   
+
+  
+
+  
+
+  
+  
+
+  
+
   
 
   
