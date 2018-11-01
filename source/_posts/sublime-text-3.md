@@ -12,8 +12,8 @@ tags: [tools]
 
 ## 1、安装sublime text 3
 
-由于要在多台电脑上使用，所以下载portable版本，通过坚果云同步配置。
-[下载sublime text 3](http://www.sublimetext.com/3)，解压到自己想放软件的地方，同步到坚果云。
+[下载sublime text 3](http://www.sublimetext.com/3)，解压到自己想放软件的地方。
+PS.测试通过坚果云同步软件，但会带来使用不便，有时候会有文件冲突，所以做好基本配置后，可以打包一份上传到云，需要时再下载，后期的改动基本上是插件方面的。Atom可以同步，不过没怎么倒腾。
 
 ## 2、基本设置
 
