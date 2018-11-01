@@ -236,6 +236,7 @@ $ git clone https://github.com/iissnan/hexo-theme-next themes/next
 
 参考：
 - [Next github](https://github.com/theme-next/hexo-theme-next)
-- 配置参考：[让你的Hexo博客华丽升级](https://juejin.im/entry/59e862ee6fb9a04517044f72)
+- [Next 主题配置](https://theme-next.iissnan.com/theme-settings.html#use-bg-animation)
+- [让你的Hexo博客华丽升级](https://juejin.im/entry/59e862ee6fb9a04517044f72)
 - [Hexo Next主题5.X升级至6.X](https://my.oschina.net/m1c3/blog/1622488)
 - [从 NexT v5.1.x 更新](https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/UPDATE-FROM-5.1.X.md)
