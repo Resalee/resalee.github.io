@@ -9,7 +9,7 @@ tags: [JavaScript]
 - ECMAScript：翻译器/解释器，人类语言与计算机的0,1相互转换
 - DOM：Document Object Model，文档对象模型，操作HTML（document）
 - BOM：Browser Object Model，浏览器对象模型，操作浏览器（window）
-
+<!-- more -->
 兼容性：
 - ECMA：几乎没有兼容性问题
 - DOM：有一些操作不兼容
