@@ -5,6 +5,7 @@ tags: [hexo, Github]
 ---
 
 之前搭建过一次，但是没有备份hexo设置，小白看了一圈，还是要重来，首要问题就是解决hexo文件同步，通过GitHub仓库建立两个分支，master是发布的博客文件，hexo分支放hexo文件。记录一下过程，所用系统都是windows的。
+<!-- more -->
 
 ## 1、基础环境配置
 
@@ -214,6 +215,27 @@ timezone: Asia/Shanghai
 - [多机更新 Hexo 博客](http://lowrank.science/Hexo-Migration/)
 - [Hexo的版本控制与持续集成](https://formulahendry.github.io/2016/12/04/hexo-ci/) `待实践`
 
+***
+2018-11-1更新：
+## 9、hexo更新
+```
+npm i hexo-cli -g
+```
 
+参考：
+- [Hexo官网](https://hexo.io/)
+- [Hexo文档](https://hexo.io/zh-cn/docs/)
+- [Hexo升级之坑](http://zerosoul.github.io/2016/06/15/upgrade-hexo-to-3-2/)
 
+## 10、next主题更新
+之前是5.1.3版本的，直接升级发现木有变化，后来发现有6.0以上版本了，由于上次没有做多少配置，我直接删掉了原文件夹，然后重新安装next了：
+```
+$ cd your-hexo-site
+$ git clone https://github.com/iissnan/hexo-theme-next themes/next
+```
 
+参考：
+- [Next github](https://github.com/theme-next/hexo-theme-next)
+- 配置参考：[让你的Hexo博客华丽升级](https://juejin.im/entry/59e862ee6fb9a04517044f72)
+- [Hexo Next主题5.X升级至6.X](https://my.oschina.net/m1c3/blog/1622488)
+- [从 NexT v5.1.x 更新](https://github.com/theme-next/hexo-theme-next/blob/master/docs/zh-CN/UPDATE-FROM-5.1.X.md)
